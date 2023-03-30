@@ -1,11 +1,14 @@
 {
   "name": "client",
   "private": true,
+  "homepage": "http://bokanyi.github.io/mowiereview",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=./",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,10 +18,12 @@
     "@emotion/styled": "^11.10.6",
     "axios": "^1.3.4",
     "framer-motion": "^10.9.2",
+    "gh-pages": "^5.0.0",
     "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.9.0"
+    "react-router-dom": "^6.9.0",
+    "save-dev": "^0.0.1-security"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
